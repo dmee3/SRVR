@@ -10,9 +10,9 @@
 	<script type="text/javascript" src="js/plupload.full.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script> 
 </head>
-<body>
+<body onLoad="showFiles('uploads')">
 	<div id="top">
-		<div id="title">SRVR</div>
+		<div id="title"></div>
 		<div class="button" id="upload" onClick="showForm();">Upload</div>
 	</div>
 	<div id="main">

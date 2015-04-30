@@ -1,7 +1,9 @@
 <?php
 
-	$dir = 'uploads';
+	$dir = $_GET['path'];
 	$response = scan($dir);
+	header('Content-type: application/json');
+	echo json_encode($response);
 
 	function scan($dir) {
 
@@ -17,8 +19,7 @@
 				$contents[] = array(
 					'name' => $f,
 					'type' => 'folder',
-					'path' => $dir . '/' . $f,
-					'items' => scan($dir . '/' . $f)
+					'path' => $dir . '/' . $f
 				);
 			} else {
 				$contents[] = array(
@@ -32,9 +33,5 @@
 
 		return $contents;
 	}
-
-	header('Content-type: application/json');
-
-	echo json_encode($response);
 
 ?>

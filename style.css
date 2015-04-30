@@ -19,6 +19,14 @@ ul {
 	padding: 0;
 }
 
+.title_link:hover {
+	text-decoration: underline;
+}
+
+.title_link_lg {
+	font-size: 2em;
+}
+
 .button {
 	background-color: #a6e22a;
 	padding: 6px;
@@ -138,7 +146,7 @@ ul {
 #title {
 	position: relative;
 	top: 0;
-	font-size: 4em;
+	font-size: 2em;
 	font-weight: 500;
 }
 
